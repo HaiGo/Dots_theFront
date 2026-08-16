@@ -1,0 +1,399 @@
+/**
+ * TalkJS Custom Theme CSS
+ * Brand Color: #C1FF72
+ * 
+ * To apply this theme:
+ * 1. Go to https://talkjs.com/dashboard
+ * 2. Navigate to Settings > Themes
+ * 3. Select your theme or create a new one
+ * 4. Copy and paste this CSS into the theme editor
+ * 5. Save and the changes will apply immediately
+ */
+
+/* ============================================
+   VARIABLES - Easy color management
+   ============================================ */
+:root {
+  --brand-primary: #C1FF72;
+  --brand-dark: #a8e05f;
+  --brand-light: #d9ffa8;
+  --background-dark: #040112;
+  --background-light: #ffffff;
+  --text-dark: #000000;
+  --text-light: #ffffff;
+  --text-gray: #666666;
+  --border-color: #e5e5e5;
+}
+
+/* ============================================
+   CHAT CONTAINER
+   ============================================ */
+.talkjs-container {
+  background-color: var(--background-light);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* ============================================
+   HEADER
+   ============================================ */
+.header {
+  background-color: var(--background-dark);
+  border-bottom: 2px solid var(--brand-primary);
+}
+
+.header h1,
+.header h2,
+.header .participant-name {
+  color: var(--text-light);
+}
+
+.header .back-button,
+.header .close-button {
+  color: var(--brand-primary);
+}
+
+.header .back-button:hover,
+.header .close-button:hover {
+  background-color: rgba(193, 255, 114, 0.1);
+}
+
+/* ============================================
+   CONVERSATION LIST (INBOX)
+   ============================================ */
+.conversation-list {
+  background-color: var(--background-light);
+}
+
+.conversation-item {
+  border-bottom: 1px solid var(--border-color);
+  transition: background-color 0.2s ease;
+}
+
+.conversation-item:hover {
+  background-color: rgba(193, 255, 114, 0.05);
+}
+
+.conversation-item.selected,
+.conversation-item.active {
+  background-color: rgba(193, 255, 114, 0.15);
+  border-left: 3px solid var(--brand-primary);
+}
+
+.conversation-item .name {
+  color: var(--text-dark);
+  font-weight: 600;
+}
+
+.conversation-item .last-message {
+  color: var(--text-gray);
+}
+
+.conversation-item .unread-count {
+  background-color: var(--brand-primary);
+  color: var(--text-dark);
+  font-weight: bold;
+}
+
+/* ============================================
+   MESSAGE BUBBLES
+   ============================================ */
+
+/* Your messages (sent) */
+.message.sent .message-bubble {
+  background-color: var(--brand-primary);
+  color: var(--text-dark);
+  border-radius: 18px 18px 4px 18px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.message.sent .message-bubble a {
+  color: var(--text-dark);
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+/* Other user's messages (received) */
+.message.received .message-bubble {
+  background-color: #e5e5e5;
+  color: var(--text-dark);
+  border-radius: 18px 18px 18px 4px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.message.received .message-bubble a {
+  color: var(--brand-dark);
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+/* Message timestamps */
+.message .timestamp {
+  color: var(--text-gray);
+  font-size: 11px;
+}
+
+/* Message sender name */
+.message .sender-name {
+  color: var(--text-gray);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* ============================================
+   MESSAGE INPUT
+   ============================================ */
+.message-input-container {
+  background-color: var(--background-light);
+  border-top: 1px solid var(--border-color);
+  padding: 12px;
+}
+
+.message-input {
+  background-color: #f5f5f5;
+  border: 2px solid transparent;
+  border-radius: 24px;
+  color: var(--text-dark);
+  padding: 12px 16px;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.message-input:focus {
+  background-color: var(--background-light);
+  border-color: var(--brand-primary);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(193, 255, 114, 0.1);
+}
+
+.message-input::placeholder {
+  color: var(--text-gray);
+}
+
+/* ============================================
+   SEND BUTTON
+   ============================================ */
+.send-button {
+  background-color: var(--brand-primary);
+  color: var(--text-dark);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.send-button:hover {
+  background-color: var(--brand-dark);
+  transform: scale(1.05);
+}
+
+.send-button:active {
+  transform: scale(0.95);
+}
+
+.send-button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.send-button svg,
+.send-button i {
+  color: var(--text-dark);
+}
+
+/* ============================================
+   ATTACHMENT BUTTON
+   ============================================ */
+.attachment-button {
+  background-color: transparent;
+  color: var(--text-gray);
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 8px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.attachment-button:hover {
+  background-color: rgba(193, 255, 114, 0.1);
+  color: var(--brand-dark);
+}
+
+/* ============================================
+   TYPING INDICATOR
+   ============================================ */
+.typing-indicator {
+  color: var(--text-gray);
+  font-size: 13px;
+  font-style: italic;
+  padding: 8px 16px;
+}
+
+.typing-indicator .dot {
+  background-color: var(--brand-primary);
+}
+
+/* ============================================
+   MESSAGE STATUS
+   ============================================ */
+.message-status {
+  color: var(--text-gray);
+  font-size: 11px;
+}
+
+.message-status.delivered {
+  color: var(--text-gray);
+}
+
+.message-status.read {
+  color: var(--brand-dark);
+}
+
+/* ============================================
+   UNREAD MESSAGE SEPARATOR
+   ============================================ */
+.unread-separator {
+  background-color: var(--brand-primary);
+  color: var(--text-dark);
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 12px;
+  text-align: center;
+  margin: 16px auto;
+  max-width: 200px;
+}
+
+/* ============================================
+   DATE SEPARATORS
+   ============================================ */
+.date-separator {
+  background-color: rgba(193, 255, 114, 0.15);
+  color: var(--text-gray);
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 12px;
+  text-align: center;
+  margin: 16px auto;
+  max-width: 150px;
+}
+
+/* ============================================
+   SCROLLBAR
+   ============================================ */
+.message-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.message-list::-webkit-scrollbar-track {
+  background-color: #f5f5f5;
+}
+
+.message-list::-webkit-scrollbar-thumb {
+  background-color: var(--brand-primary);
+  border-radius: 4px;
+}
+
+.message-list::-webkit-scrollbar-thumb:hover {
+  background-color: var(--brand-dark);
+}
+
+/* ============================================
+   EMOJI PICKER
+   ============================================ */
+.emoji-picker {
+  border: 2px solid var(--brand-primary);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.emoji-picker .emoji-category-active {
+  border-bottom: 2px solid var(--brand-primary);
+  color: var(--brand-dark);
+}
+
+/* ============================================
+   LOADING INDICATOR
+   ============================================ */
+.loading-indicator {
+  color: var(--brand-primary);
+}
+
+.loading-spinner {
+  border-color: var(--brand-primary);
+  border-top-color: transparent;
+}
+
+/* ============================================
+   NOTIFICATIONS/ALERTS
+   ============================================ */
+.notification,
+.alert {
+  background-color: rgba(193, 255, 114, 0.9);
+  color: var(--text-dark);
+  border-radius: 12px;
+  padding: 12px 16px;
+  font-weight: 600;
+}
+
+/* ============================================
+   SYSTEM MESSAGES
+   ============================================ */
+.system-message {
+  background-color: rgba(193, 255, 114, 0.2);
+  color: var(--text-gray);
+  font-size: 13px;
+  padding: 8px 16px;
+  border-radius: 12px;
+  text-align: center;
+  margin: 8px auto;
+  max-width: 80%;
+}
+
+/* ============================================
+   MOBILE RESPONSIVE
+   ============================================ */
+@media (max-width: 768px) {
+  .header {
+    padding: 12px 16px;
+  }
+  
+  .message-bubble {
+    max-width: 80%;
+  }
+  
+  .message-input-container {
+    padding: 8px;
+  }
+}
+
+/* ============================================
+   DARK MODE SUPPORT (Optional)
+   ============================================ */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-light: #1a1a1a;
+    --text-dark: #ffffff;
+    --border-color: #333333;
+  }
+  
+  .message.received .message-bubble {
+    background-color: #2a2a2a;
+    color: var(--text-light);
+  }
+  
+  .message-input {
+    background-color: #2a2a2a;
+    color: var(--text-light);
+  }
+  
+  .conversation-list {
+    background-color: #1a1a1a;
+  }
+}
+

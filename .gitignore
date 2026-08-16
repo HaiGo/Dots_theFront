@@ -1,0 +1,71 @@
+# ============================================
+# Pi-Booth Frontend (Dots) — .gitignore
+# ============================================
+
+# ---- Dependencies ----
+node_modules/
+
+# ---- Expo ----
+.expo/
+dist/
+web-build/
+expo-env.d.ts
+
+# ---- Native build folders ----
+/ios
+/android
+.kotlin/
+
+# ---- Build artifacts & caches ----
+*.orig.*
+*.tsbuildinfo
+app-example/
+
+# ---- Signing & certificates ----
+*.jks
+*.p8
+*.p12
+*.key
+*.pem
+*.mobileprovision
+
+# ---- Metro bundler ----
+.metro-health-check*
+
+# ---- Debug logs ----
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+*.log
+
+# ---- macOS ----
+.DS_Store
+
+# ---- IDE / Editor settings ----
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ---- Environment files (contain secrets) ----
+.env
+.env.*
+!.env.example
+
+# ---- Firebase / Google Services (contains API keys) ----
+google-services.json
+GoogleService-Info.plist
+!google-services.example.json
+
+# ---- Development markdown files ----
+# All .md files are ignored except the public README.md
+*.md
+!README.md
+
+# ---- Database & local data ----
+*.db
+*.sqlite
+*.sqlite3
+
+# ---- Miscellaneous ----
+.npmrc

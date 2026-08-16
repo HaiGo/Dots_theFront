@@ -1,0 +1,23 @@
+{
+  "_generated": "2025-10-31T01:13:13.783Z",
+  "_note": "This file is auto-generated. Run: node scripts/generate-frame-mappings.js",
+  "categories": [
+    {
+      "id": "birthday",
+      "title": "Birthday Party",
+      "description": "Fun birthday-themed frames",
+      "frames": [
+        {
+          "id": "birthday_1",
+          "name": "1",
+          "file": "birthday/1.png"
+        },
+        {
+          "id": "birthday_2",
+          "name": "2",
+          "file": "birthday/2.png"
+        }
+      ]
+    }
+  ]
+}

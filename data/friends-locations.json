@@ -1,0 +1,45 @@
+{
+  "friends": [
+    {
+      "id": "1",
+      "name": "Sarah Johnson",
+      "latitude": 37.7749,
+      "longitude": -122.4194,
+      "lastSeen": "2 mins ago",
+      "avatar": "https://i.pravatar.cc/150?img=1"
+    },
+    {
+      "id": "2",
+      "name": "Mike Chen",
+      "latitude": 37.7849,
+      "longitude": -122.4094,
+      "lastSeen": "5 mins ago",
+      "avatar": "https://i.pravatar.cc/150?img=2"
+    },
+    {
+      "id": "3",
+      "name": "Emily Davis",
+      "latitude": 37.7649,
+      "longitude": -122.4294,
+      "lastSeen": "10 mins ago",
+      "avatar": "https://i.pravatar.cc/150?img=3"
+    },
+    {
+      "id": "4",
+      "name": "James Wilson",
+      "latitude": 37.7949,
+      "longitude": -122.3994,
+      "lastSeen": "15 mins ago",
+      "avatar": "https://i.pravatar.cc/150?img=4"
+    },
+    {
+      "id": "5",
+      "name": "Lisa Anderson",
+      "latitude": 37.7549,
+      "longitude": -122.4394,
+      "lastSeen": "20 mins ago",
+      "avatar": "https://i.pravatar.cc/150?img=5"
+    }
+  ]
+}
+
